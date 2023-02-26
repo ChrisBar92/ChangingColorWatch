@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- fotn awesome kit -->
+    <script src="https://kit.fontawesome.com/db113c2254.js" crossorigin="anonymous"></script>
+    <title>Changing Color Watch</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <p class="info">
+            <i class="fas fa-question"></i>
+        </p>
+
+        <h1 class="header">Stoper</h1>
+        <p class="stopwatch">0:00</p>
+        <p class="time">0:00</p>
+
+        <div class="buttons">
+            <button class=" btn start"><i class="fas fa-play"></i></button>
+            <button class=" btn pause"><i class="fas fa-pause"></i></button>
+            <button class=" btn stop"><i class="fas fa-stop"></i></button>
+            <button class=" btn reset"><i class="fas fa-times"></i></button>
+            <button class=" btn history">archiwum</button>
+        </div>
+
+        <ul class="time-list"></ul>
+    </div>
+
+    <div class="modal-shadow">
+        <div class="modal">
+            <h3 class="modal__text">Instrukcja:</h3>
+            <p class="modal__p"><i class="fas fa-play"></i> - start</p>
+            <p class="modal__p"><i class="fas fa-pause"></i> - pauza</p>
+            <p class="modal__p"><i class="fas fa-stop"></i> - stop</p>
+            <p class="modal__p"><i class="fas fa-times"></i> - skasuj wszystko (łącznie z archiwum)</p>
+            <p class="modal__p"><strong>archiwum</strong> - zobacz wzceśniejsze pomiary</p>
+            <button class="btn modal__close">Zamknij</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,7 +1,14 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --first-color: rgb(250, 20, 6);
+  --second-color: rgb(190, 210, 197);
+  --hover-color: rgb(209, 33, 24);
 }
 
 html {
@@ -30,20 +37,26 @@ body {
   border-radius: 8px;
   box-shadow: 5px 5px 10px #000;
   color: #fff;
+  overflow: hidden;
 }
 
-.info {
+.info__icon {
+  font-size: 2.4rem;
   position: absolute;
   top: 0.6rem;
-  right: 1.4rem;
   padding: 2rem;
-  font-size: 2.4rem;
-  color: #d2c7be;
+  color: var(--second-color);
   cursor: pointer;
   transition: color 0.3s;
 }
-.info:hover {
-  color: #fa1406;
+.info__icon:first-of-type {
+  right: 1rem;
+}
+.info__icon:last-of-type {
+  right: 7rem;
+}
+.info__icon:hover {
+  color: var(--first-color);
 }
 
 .header {
@@ -54,12 +67,12 @@ body {
 
 .stopwatch {
   font-size: 7.2rem;
-  color: #fa1406;
+  color: var(--first-color);
 }
 
 .time {
   visibility: hidden;
-  color: #d2c7be;
+  color: var(--second-color);
   font-size: 2.2rem;
 }
 
@@ -77,13 +90,13 @@ body {
   color: #fff;
   font-size: 2.2rem;
   background-color: transparent;
-  border: 1px solid #fa1406;
+  border: 1px solid var(--first-color);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 .btn:hover, .btn:focus {
-  background-color: #fa1406;
+  background-color: var(--first-color);
   outline: none;
 }
 
@@ -97,7 +110,7 @@ body {
   justify-content: space-between;
   width: 30rem;
   font-size: 2.2rem;
-  color: #d2c7be;
+  color: var(--second-color);
 }
 .time-list span {
   font-weight: bold;
@@ -134,7 +147,7 @@ body {
   display: block;
   margin: 3rem auto 1rem;
   width: 20rem;
-  background-color: #fa1406;
+  background-color: var(--first-color);
   transition: background-color 0.3s;
 }
 .modal-shadow .modal__close:hover {
@@ -152,4 +165,58 @@ body {
   to {
     opacity: 1;
   }
+}
+/* zmiana kolorów */
+.colors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 10rem;
+  right: -10rem;
+  width: 6.4rem;
+  height: 22rem;
+  transition: transform 0.3s;
+}
+
+.color {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.show-colors {
+  transform: translateX(-11rem);
+}
+
+.one {
+  background-color: rgb(250, 20, 6);
+  box-shadow: 0 0 8px rgb(250, 20, 6);
+}
+.one:hover {
+  background-color: rgb(209, 33, 24);
+  box-shadow: 0 0 16px rgb(250, 20, 6);
+}
+
+.two {
+  background-color: rgb(6, 173, 250);
+  box-shadow: 0 0 8px rgb(6, 173, 250);
+}
+.two:hover {
+  background-color: rgb(28, 145, 199);
+  box-shadow: 0 0 16px rgb(6, 173, 250);
+}
+
+.three {
+  background-color: rgb(0, 255, 42);
+  box-shadow: 0 0 8px rgb(0, 255, 42);
+}
+.three:hover {
+  background-color: rgb(28, 209, 58);
+  box-shadow: 0 0 16px rgb(0, 255, 42);
 }/*# sourceMappingURL=main.css.map */
